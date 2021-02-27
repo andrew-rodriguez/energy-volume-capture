@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue194;\red255\green255\blue255;
+\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c0\c0\c80392;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww16500\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 docker run -d --name sql_server -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=NaD#7000\'92 -p 1433:1433 mcr.microsoft.com/mssql/server:2019-latest\
+\
+mssql -u sa -p NaD#7000\
+\
+create database cmegroup;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs30 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 CREATE\cf0  \cf3 TABLE\cf0  raw_capture (\cb1 \
+\cb4 \'a0\'a0\'a0 name varchar(255) not null,\cb1 \
+\cb4 \'a0\'a0\'a0 type varchar(255) not null,\cb1 \
+\cb4 \'a0\'a0\'a0 globex int,\cb1 \
+\cb4 \'a0\'a0\'a0 open_outcry int,\cb1 \
+\cb4 	clear_port int,\
+	volume int,\
+	open_interest int,\
+	change int,\
+	trade_date date,\
+	primary key (name, type)\cb1 \
+\cb4 );}
